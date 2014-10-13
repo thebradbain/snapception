@@ -9,3 +9,6 @@
 
 # Virtualenv
 /ENV/
+
+# Build data
+/build/
