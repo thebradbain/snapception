@@ -27,10 +27,10 @@ Configuring it is also pretty easy:
 3. Watch all the Snapchats you receive over the network become available on your computer
 
 ## Isn't this just SnapSave/SnapBox/SnapSomething?
-Nope. Those require you to authenticate with Snapchat's backend by giving the third party your username and password. Snapception, on the other hand, intercepts **all** snapchats received over the network as long as the receiving device is connected to the computer running Snapception via a proxy. Those applications also require you to manually login and save your snapchat before officially opening it; Snapception automatically intercepts, decrypts, and saves your received snaps.
+Nope. Those require you to authenticate with Snapchat's backend by giving the third party your username and password. Snapception, on the other hand, intercepts *all* snapchats received over the network so long as the receiving device is connected to the computer running Snapception via a proxy. Those applications also require you to manually login and save your snapchat before officially opening it; Snapception automatically intercepts, decrypts, and saves your received snaps.
 
 ## What's your aim? Privacy invasion? World domination? 
-Nope. I just created this to call attention to a security vulnerability that's been present in Snapchat for over a year. Did you know they use **one**, **hardcoded** key for **all** video and image encryption? 
+Nope. I just created this to call attention to a security vulnerability that's been present in Snapchat for over a year. Did you know they use *one*, *hardcoded* key for *all* video and image encryption? 
 
 Anyway, for Snapception to intercept your snapchats, you must be connected to the computer via a proxy and have installed its CA, so someone can't just intercept your snapchats if you merely are using their network.
 
