@@ -35,7 +35,7 @@ Nope. I just created this to call attention to a security vulnerability that's b
 Anyway, for Snapception to intercept your snapchats, you must be connected to the computer via a proxy and have installed its CA, so someone can't just intercept your snapchats if you merely are using their network.
 
 ## What's the technology stack behind Snapception?
-Glad you asked! The core of my script is basically a glorified event handler built on top of [mitmdump](https://github.com/mitmproxy/mitmproxy), a highly extensible and easily scriptable man-in-the-middle proxy. Besides the event handler I built a basic command line interface using [click](https://github.com/mitsuhiko/click), which both launched mitmdump and glued together its custom event handler.
+Glad you asked! The core of my script is basically a glorified event handler built on top of [mitmdump](https://github.com/mitmproxy/mitmproxy), a highly extensible and easily scriptable man-in-the-middle proxy server. Besides the event handler I built a basic command line interface using [click](https://github.com/mitsuhiko/click), which both launched mitmdump and glued together its custom event handler.
 
 I would not have been able to build Snapception without the decryption ruby script by [AJ Jenkins](https://github.com/ajenkins/comp116-ajenkins/tree/master/final_project), who in turn based it upon the code written by [Amelia Cuss](https://kivikakk.ee/2013/05/10/snapchat.html). My code expands upon theirs in that in automatically intercepts the encrypted snapchats before decrypting them whereas before the encrypted snapchats would have to manually be obtained some other way.
 
