@@ -21,6 +21,7 @@ Options:
 ```
 
 Configuring it is also pretty easy:
+
 1. Configure your device to use a proxy pointing to Port 8080 of the host computer
 2. Install a CA on your device by visiting mitm.it once connected to the proxy
 3. Watch all the Snapchats you receive over the network become available on your computer
