@@ -40,4 +40,4 @@ Glad you asked! The core of my script is basically a glorified event handler bui
 I would not have been able to build Snapception without the decryption ruby script by [AJ Jenkins](https://github.com/ajenkins/comp116-ajenkins/tree/master/final_project), who in turn based it upon the code written by [Amelia Cuss](https://kivikakk.ee/2013/05/10/snapchat.html). My code expands upon theirs in that in automatically intercepts the encrypted snapchats before decrypting them whereas before the encrypted snapchats would have to manually be obtained some other way.
 
 ## Can I contribute?
-Please! Feel free to submit any pull requests. I whipped this application up in less than a day, so there is bound to be some bugs, missing features, or hastily written code.
+Please! Feel free to submit any pull requests. I whipped this application up in less than a day, so there are bound to be some bugs, missing features, or hastily written code.
