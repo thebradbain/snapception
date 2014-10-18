@@ -1,14 +1,12 @@
 import os
+import re
 import sys
 import uuid
 import requests
+from ast import literal_eval
 from subprocess import call
 
-conf = {
-	'quiet' : True,
-	'snapsDir' : '~/snaps/',
-	'pyDir' : ''
-}
+conf = {} # populated by given command line arguments via start()
 
 def request(context, flow):
 	request = flow.request
@@ -34,21 +32,20 @@ def request(context, flow):
 		log("---- Waiting for a Snapchat... ----")
 
 def start(context, argv):
+	global conf
+	conf = literal_eval(argv[1]) # decode all script arguments
 	conf['pyDir'] = os.path.dirname(argv[0])
-	args = argv[1].split()
-	if('--verbose' in args):
-		conf['quiet'] = False
-		args.remove('--verbose')
-	if(args[0]):
-		snapsDir = args[0]
-		if(not snapsDir[-1:] == '/'):
-			snapsDir = snapsDir+'/' 
-		conf['snapsDir'] = snapsDir
 
-	print 'Snapception is now running on Port 8080. Configure your device to point to this port via a proxy.'
+	snapsDir = conf['snapsDir']
+	if(not snapsDir[-1:] == '/'):
+		snapsDir = snapsDir+'/' 
+	conf['snapsDir'] = snapsDir
+
+	print 'Snapception is now running on Port %s. Configure your device to point to this port via a proxy. Intercepted snaps will appear in \"%s\"' % (conf['port'], conf['snapsDir'][:-1])
 	print 'If you have not already done so, you will need to install a Certificate Authority. The easiest way to do this is to visit mitm.it on your device.'
 	log("---- Waiting for a Snapchat... ----")
 
 def log(str):
-	if(not conf['quiet']):
+	if(not conf['verbose']):
 		print str
+
