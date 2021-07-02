@@ -10,7 +10,8 @@ setup(name='snapception',
 	  install_requires=[
 	  	'requests',
 	  	'click',
-	  	'mitmproxy'
+	  	'mitmproxy',
+		'command_line'
 	  ],
 	  include_package_data=True,
 	  entry_points={'console_scripts' : ['snapception=snapception.command_line:launch']}
